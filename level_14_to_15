@@ -1,0 +1,47 @@
+# Bandit Level 14 → Level 15
+
+**Date:** 6 November 2026
+
+## Objective
+
+Retrieve the next level's password by connecting to a service running locally on TCP port `30000` and submitting the current level's password.
+
+## Credentials
+
+- **Username:** `bandit14`
+- **Password:** `MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS`
+
+## Connection
+
+Connect to the Bandit server using SSH:
+
+```bash
+ssh bandit14@bandit.labs.overthewire.org -p 2220
+```
+
+## Hints & Commands Learned
+
+- `nc` (Netcat)
+- TCP connections
+- Localhost (`127.0.0.1`)
+- Network ports
+- Client-server communication
+
+## Steps to Solve
+
+### Step 1: Connect to the Bandit server
+
+Use the SSH command above with the supplied credentials.
+
+### Step 2: Connect to the local service
+
+Run the following command:
+
+```bash
+nc localhost 30000
+```
+
+**Explanation:**
+
+- `nc` starts the Netcat utility.
+- `localhost` refers to the same machine where the command
